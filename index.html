@@ -3,6 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <title>Мінеральні води Вінничини</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #e6f6fa;
+      color: #033649;
+    }
+
+    header {
+      background: linear-gradient(90deg, #0b72b9, #36a9e1, #bfeaf2);
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 10px 0;
+      color: white;
+    }
+
+    nav {
+      margin-top: 15px;
+    }
+
+    nav button {
+      background-color: #0b72b9;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      cursor: pointer;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    nav button:hover {
+      background-color: #095a92;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    #photoImage {
+      max-width: 800px;
+    }
+
+    #gifSection img {
+      max-width: 600px;
+    }
+
+    .controls button {
+      background-color: #36a9e1;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      margin: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .controls button:hover {
+      background-color: #2a8fc0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      color: #555;
+      font-size: 14px;
+    }
+  </style>
 </head>
 
 <body>
@@ -10,22 +95,20 @@
 <header>
   <h1>Мінеральні води Вінничини</h1>
 
-  <img src="images/logo.png" alt="Логотип" width="250">
+  <img src="images/logo.png" alt="Логотип" width="200">
 
   <nav>
     <button onclick="showHome()">Головна</button>
     <button onclick="showPhotos()">Фото</button>
     <button onclick="showGif()">GIF</button>
   </nav>
-
-  <hr>
 </header>
 
 <section id="homeSection">
   <h2>Про сайт</h2>
   <p>
     Цей вебсайт присвячений мінеральним водам Вінничини.
-    На сайті представлено візуальні матеріали, що демонструють
+    Тут представлені візуальні матеріали, що демонструють
     природне походження та особливості мінеральних джерел регіону.
   </p>
 </section>
@@ -33,20 +116,24 @@
 <section id="photoSection" style="display:none;">
   <h2>Фотогалерея</h2>
 
-  <img id="photoImage" src="images/image1.png" alt="Мінеральні води" width="800">
+  <img id="photoImage" src="images/image1.png" alt="Мінеральні води">
 
-  <p>
+  <div class="controls">
     <button onclick="prevPhoto()">⬅ Назад</button>
     <button onclick="nextPhoto()">Далі ➡</button>
-  </p>
+  </div>
 
   <p id="photoCounter">Фото 1 з 10</p>
 </section>
 
 <section id="gifSection" style="display:none;">
   <h2>GIF-анімація</h2>
-  <img src="images/gif.gif" alt="GIF мінеральні води" width="600">
+  <img src="images/gif.gif" alt="GIF мінеральні води">
 </section>
+
+<footer>
+  © 2025 Мінеральні води Вінничини
+</footer>
 
 <script>
   let photos = [
