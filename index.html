@@ -1,101 +1,128 @@
 <!doctype html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <title>Мінеральні води Вінничини</title>
+<meta charset="UTF-8">
+<title>Мінеральні води Вінничини</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #e6f6fa;
-      color: #033649;
-    }
+<style>
+/* ===== Загальні стилі ===== */
+* {
+  box-sizing: border-box;
+}
 
-    header {
-      background: linear-gradient(90deg, #0b72b9, #36a9e1, #bfeaf2);
-      padding: 20px;
-      text-align: center;
-    }
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #eaf6fa;
+  color: #033649;
+}
 
-    header h1 {
-      margin: 10px 0;
-      color: white;
-    }
+/* ===== Шапка ===== */
+header {
+  background: linear-gradient(90deg, #0b72b9, #36a9e1, #bfeaf2);
+  padding: 25px 15px;
+  text-align: center;
+}
 
-    nav {
-      margin-top: 15px;
-    }
+header h1 {
+  margin: 10px 0 15px;
+  color: #fff;
+}
 
-    nav button {
-      background-color: #0b72b9;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      margin: 5px;
-      cursor: pointer;
-      border-radius: 6px;
-      font-size: 16px;
-    }
+header img {
+  max-width: 180px;
+}
 
-    nav button:hover {
-      background-color: #095a92;
-    }
+/* ===== Навігація ===== */
+nav {
+  margin-top: 15px;
+}
 
-    section {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 20px;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      text-align: center;
-    }
+nav button {
+  background-color: rgba(255,255,255,0.9);
+  color: #0b72b9;
+  border: none;
+  padding: 10px 18px;
+  margin: 5px;
+  border-radius: 20px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
 
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
+nav button:hover {
+  background-color: #0b72b9;
+  color: white;
+}
 
-    #photoImage {
-      max-width: 800px;
-    }
+/* ===== Контент ===== */
+main {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
 
-    #gifSection img {
-      max-width: 600px;
-    }
+section {
+  background-color: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  margin-bottom: 30px;
+  text-align: center;
+}
 
-    .controls button {
-      background-color: #36a9e1;
-      color: white;
-      border: none;
-      padding: 8px 16px;
-      margin: 10px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 15px;
-    }
+section h2 {
+  margin-top: 0;
+  color: #0b72b9;
+}
 
-    .controls button:hover {
-      background-color: #2a8fc0;
-    }
+/* ===== Зображення ===== */
+img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 10px;
+  margin: 15px auto;
+  display: block;
+}
 
-    footer {
-      text-align: center;
-      padding: 15px;
-      color: #555;
-      font-size: 14px;
-    }
-  </style>
+/* ===== Кнопки керування ===== */
+.controls button {
+  background-color: #36a9e1;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  margin: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.controls button:hover {
+  background-color: #2a8fc0;
+}
+
+/* ===== Лічильник ===== */
+#photoCounter {
+  margin-top: 10px;
+  color: #555;
+}
+
+/* ===== Футер ===== */
+footer {
+  text-align: center;
+  padding: 15px;
+  color: #666;
+  font-size: 14px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
   <h1>Мінеральні води Вінничини</h1>
-
-  <img src="images/logo.png" alt="Логотип" width="200">
+  <img src="images/logo.png" alt="Логотип">
 
   <nav>
     <button onclick="showHome()">Головна</button>
@@ -104,12 +131,13 @@
   </nav>
 </header>
 
+<main>
+
 <section id="homeSection">
   <h2>Про сайт</h2>
   <p>
-    Цей вебсайт присвячений мінеральним водам Вінничини.
-    Тут представлені візуальні матеріали, що демонструють
-    природне походження та особливості мінеральних джерел регіону.
+    Цей сайт присвячений мінеральним водам Вінничини та їх природному походженню.
+    Тут зібрані фотографії та анімації, що демонструють особливості водних джерел регіону.
   </p>
 </section>
 
@@ -131,66 +159,68 @@
   <img src="images/gif.gif" alt="GIF мінеральні води">
 </section>
 
+</main>
+
 <footer>
   © 2025 Мінеральні води Вінничини
 </footer>
 
 <script>
-  let photos = [
-    "images/image1.png",
-    "images/image2.png",
-    "images/image3.png",
-    "images/image4.png",
-    "images/image5.png",
-    "images/image6.png",
-    "images/image7.png",
-    "images/image8.png",
-    "images/image9.png",
-    "images/image10.png"
-  ];
+let photos = [
+  "images/image1.png",
+  "images/image2.png",
+  "images/image3.png",
+  "images/image4.png",
+  "images/image5.png",
+  "images/image6.png",
+  "images/image7.png",
+  "images/image8.png",
+  "images/image9.png",
+  "images/image10.png"
+];
 
-  let index = 0;
+let index = 0;
 
-  function updatePhoto() {
-    document.getElementById("photoImage").src = photos[index];
-    document.getElementById("photoCounter").innerText =
-      "Фото " + (index + 1) + " з " + photos.length;
+function updatePhoto() {
+  document.getElementById("photoImage").src = photos[index];
+  document.getElementById("photoCounter").innerText =
+    "Фото " + (index + 1) + " з " + photos.length;
+}
+
+function nextPhoto() {
+  if (index < photos.length - 1) {
+    index++;
+    updatePhoto();
   }
+}
 
-  function nextPhoto() {
-    if (index < photos.length - 1) {
-      index++;
-      updatePhoto();
-    }
+function prevPhoto() {
+  if (index > 0) {
+    index--;
+    updatePhoto();
   }
+}
 
-  function prevPhoto() {
-    if (index > 0) {
-      index--;
-      updatePhoto();
-    }
-  }
+function hideAll() {
+  document.getElementById("homeSection").style.display = "none";
+  document.getElementById("photoSection").style.display = "none";
+  document.getElementById("gifSection").style.display = "none";
+}
 
-  function showHome() {
-    hideAll();
-    document.getElementById("homeSection").style.display = "block";
-  }
+function showHome() {
+  hideAll();
+  document.getElementById("homeSection").style.display = "block";
+}
 
-  function showPhotos() {
-    hideAll();
-    document.getElementById("photoSection").style.display = "block";
-  }
+function showPhotos() {
+  hideAll();
+  document.getElementById("photoSection").style.display = "block";
+}
 
-  function showGif() {
-    hideAll();
-    document.getElementById("gifSection").style.display = "block";
-  }
-
-  function hideAll() {
-    document.getElementById("homeSection").style.display = "none";
-    document.getElementById("photoSection").style.display = "none";
-    document.getElementById("gifSection").style.display = "none";
-  }
+function showGif() {
+  hideAll();
+  document.getElementById("gifSection").style.display = "block";
+}
 </script>
 
 </body>
